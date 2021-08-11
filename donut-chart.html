@@ -1,0 +1,169 @@
+﻿<script src="https://www.hochhuth-consulting.de/Style%20Library/js/angular/Services/jquery.appear.min.js"></script>
+<script src="https://www.hochhuth-consulting.de/Style%20Library/js/angular/Services/jquery.easypiechart.min.js"></script>
+
+<script src="https://www.hochhuth-consulting.de/Style%20Library/js/angular/Chart/donut-chart.js?updated=12-04-2021"></script>
+
+<style>
+
+    .tab-content-standalone > .row {
+        flex-wrap: wrap;
+        margin-right: 1px;
+        margin-left: -3px;
+        display: flex;
+    }
+
+    .circular-bar {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+        .circular-bar .circular-bar-chart {
+            position: relative;
+        }
+
+        .circular-bar strong {
+            display: block;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 30px;
+            position: absolute;
+            top: 35%;
+            width: 80%;
+            left: 10%;
+            text-align: center;
+        }
+
+        .circular-bar label {
+            display: block;
+            font-weight: 100;
+            font-size: 17px;
+            line-height: 20px;
+            position: absolute;
+            top: 50%;
+            width: 80%;
+            left: 10%;
+            text-align: center;
+        }
+
+        .circular-bar.only-icon [class*="fa-"],
+        .circular-bar.only-icon .icons {
+            display: block;
+            font-size: 38px;
+            line-height: 30px;
+            position: absolute;
+            top: 40%;
+            width: 80%;
+            left: 10%;
+            text-align: center;
+        }
+
+        .circular-bar.single-line strong {
+            top: 40%;
+        }
+
+        .circular-bar.circular-bar-sm label {
+            font-size: 14px;
+            top: 36%;
+        }
+
+        .circular-bar.circular-bar-lg strong {
+            font-size: 20px;
+            top: 40%;
+        }
+
+    strong {
+        font-weight: 700 !important;
+    }
+
+    label {
+        display: inline-block;
+        margin-bottom: .5rem;
+    }
+
+    body {
+        background-color: #FFF;
+        color: #777;
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 26px;
+        margin: 0;
+    }
+    .circlebarchart{
+            background: #fff!important;
+    box-shadow: 2px 3px 10px 4px #e2e2e2;
+    padding: 10px 10px;
+    }
+    .circlebarchart h4{
+            margin-left: 8%;
+    color: #000069;
+    font-size: 21px;
+    font-weight: 500;
+    margin-top: 0px;
+    }
+</style>
+
+<div class="" ng-controller="SharewebComTestController" ng-cloak>
+    <div role="main" class="main">
+        <div class="container py-2">
+            <div class="row mt-10">
+                <div class="circlebarchart">
+
+                    <h4>Fortschrittsreporting aus den TPs</h4>
+                    <div class="row">
+                        <div class="col-lg-2 col-lg-offset-1">
+                            <div class="circular-bar">
+                                <div class="circular-bar-chart" data-percent="{{TP1percent}}" data-ng-click="openTest()" data-plugin-options="{'barColor': '#0088CC'}">
+                                    <strong>TP1</strong>
+                                    <label>33%</label>
+                                </div>
+                                <span class="bold">Case Studies</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div class="circular-bar">
+                                <div class="circular-bar-chart" data-percent="{{TP2percent}}" data-ng-click="openTest()" data-plugin-options="{'barColor': '#FF0000'}">
+                                    <strong>TP2</strong>
+                                    <label>40%</label>
+                                </div>
+                                <span class="bold">Muster-Setups</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div class="circular-bar">
+                                <div class="circular-bar-chart" data-percent="{{TP3percent}}" data-ng-click="openTest()" data-plugin-options="{'barColor': '#2BAAB1'}">
+                                    <strong>TP3</strong>
+                                    <label>25%</label>
+                                </div>
+                                <span class="bold">Rechtliche und finanzadministrative Aspekte</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div class="circular-bar">
+                                <div class="circular-bar-chart" data-percent="{{TP4percent}}" data-ng-click="openTest()" data-plugin-options="{'barColor': '#bf0eb4'}">
+                                    <strong>TP4</strong>
+                                    <label>60%</label>
+                                </div>
+                                <span class="bold">Impact Management Guidelines for PSE</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div class="circular-bar">
+                                <div class="circular-bar-chart" data-percent="{{TP5percent}}" data-ng-click="openTest()" data-plugin-options="{'barColor': '#ff9900'}">
+                                    <strong>TP5</strong>
+                                    <label>80%</label>
+                                </div>
+                                <span class="bold">Umsetzung Shareweb</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
